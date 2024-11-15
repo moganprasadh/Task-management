@@ -122,9 +122,10 @@ CALL UpdateTask(1, 'Updated Task 1', 'Updated description for Task 1', 'In Progr
 CALL DeleteTask(1);
 CALL MarkTaskAsComplete(1);
 CALL SetTaskDeadline(1, '2024-12-31 17:00:00');
-SELECT * FROM Tasks
+SELECT * FROM Tasks;
 
-
+ALTER TABLE Tasks
+MODIFY COLUMN task_id INT AUTO_INCREMENT;
 
 
 
